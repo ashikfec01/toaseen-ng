@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "toassen-ng": {
+    "toaseen-ng": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/toassen-ng",
+            "outputPath": "dist/toaseen-ng",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "toassen-ng:build:production"
+              "browserTarget": "toaseen-ng:build:production"
             },
             "development": {
-              "browserTarget": "toassen-ng:build:development"
+              "browserTarget": "toaseen-ng:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "toassen-ng:build"
+            "browserTarget": "toaseen-ng:build"
           }
         },
         "test": {
@@ -107,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "toassen-ng"
+  "defaultProject": "toaseen-ng"
 }
