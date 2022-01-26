@@ -77,17 +77,14 @@ import { WidgetsComponent } from './utilities/widgets.component';
                     { path: 'pages/help', component: AppHelpComponent },
                     { path: 'pages/empty', component: EmptyDemoComponent },
                     { path: 'documentation', component: DocumentationComponent },
-
-
-
-
+                    {
+                        path: 'collection',
+                        loadChildren: () =>
+                            import('./admin/modules/collection/collection.module').then((m) => m.CollectionModule)
+                    },
                 ]
             },
-            {
-                path: 'collection',
-                loadChildren: () =>
-                    import('./admin/modules/collection/collection.module').then((m) => m.CollectionModule)
-            },
+
             {
                 path: 'auth',
                 loadChildren: () =>
@@ -101,7 +98,9 @@ import { WidgetsComponent } from './utilities/widgets.component';
 
 
 
-        ], { scrollPositionRestoration: 'enabled' })
+        ],
+            { scrollPositionRestoration: 'enabled' }
+        )
     ],
     exports: [RouterModule]
 })

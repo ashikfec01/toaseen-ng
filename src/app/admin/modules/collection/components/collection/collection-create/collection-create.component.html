@@ -1,10 +1,45 @@
 <div class="grid">
     <div class="col-12">
         <div class="card">
-            <div class="p-inputgroup">
+            <div class="collection-info">
                 <input type="text" [(ngModel)]="collection.name" pInputText placeholder="Collection Name">
                 <input type="text" [(ngModel)]="collection.description" pInputText placeholder="Collection Description">
             </div>
+            <div class="collection-selections">
+                <div class="product-select">
+                    <p-multiSelect 
+                        [options]="products" 
+                        [(ngModel)]="selectedProducts" 
+                        defaultLabel="Select a Product" 
+                        optionLabel="name" 
+                        display="chip"
+                        (onChange)="getProduct()"
+                    ></p-multiSelect>
+                </div>
+                <div class="discount-select">
+                    <p-dropdown 
+                        [options]="discount" 
+                        [(ngModel)]="selectedDiscount" 
+                        optionLabel="name" 
+                        [filter]="true" 
+                        filterBy="name"
+                        [showClear]="true" 
+                        placeholder="Select a discount"
+                        (onChange)="getDiscount()">
+                        <ng-template pTemplate="selectedItem">
+                            <div class="country-item country-item-value" *ngIf="selectedDiscount">
+                                <div>{{selectedDiscount.name}}</div>
+                            </div>
+                        </ng-template>
+                        <ng-template let-type pTemplate="item">
+                            <div class="country-item">
+                                <div>{{type.name}}</div>
+                            </div>
+                        </ng-template>
+                    </p-dropdown>
+                </div>
+            </div>
+            
         </div>
     </div>
 </div>

@@ -1,6 +1,6 @@
 export class AuthModel {
-    accessToken: string;
+    access_token: string;
     set(auth: any) {
-        this.accessToken = auth.access_token;
+        this.access_token = auth.access_token;
     }
 }

@@ -1,7 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ButtonModule } from 'primeng/button';
+import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
+import { MultiSelectModule } from 'primeng/multiselect';
 import { TableModule } from 'primeng/table';
 import { CollectionRoutingModule } from './collection-routing.module';
 import { CollectionCreateComponent } from './components/collection/collection-create/collection-create.component';
@@ -20,6 +23,7 @@ import { VarientCreateComponent } from './components/varient/varient-create/vari
 import { VarientDetailComponent } from './components/varient/varient-detail/varient-detail.component';
 import { VarientEditComponent } from './components/varient/varient-edit/varient-edit.component';
 import { VarientComponent } from './components/varient/varient.component';
+import { CollectionListComponent } from './components/collection/collection-list/collection-list.component';
 
 
 
@@ -40,7 +44,8 @@ import { VarientComponent } from './components/varient/varient.component';
     ProductDetailComponent,
     VarientCreateComponent,
     VarientEditComponent,
-    VarientDetailComponent
+    VarientDetailComponent,
+    CollectionListComponent
   ],
   imports: [
     CommonModule,
@@ -48,6 +53,9 @@ import { VarientComponent } from './components/varient/varient.component';
     TableModule,
     FormsModule,
     InputTextModule,
+    DropdownModule,
+    MultiSelectModule,
+    ButtonModule
   ]
 })
 export class CollectionModule { }

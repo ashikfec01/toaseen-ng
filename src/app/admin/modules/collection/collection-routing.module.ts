@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CollectionCreateComponent } from './components/collection/collection-create/collection-create.component';
 import { CollectionDetailsComponent } from './components/collection/collection-details/collection-details.component';
 import { CollectionEditComponent } from './components/collection/collection-edit/collection-edit.component';
-import { CollectionComponent } from './components/collection/collection.component';
+import { CollectionListComponent } from './components/collection/collection-list/collection-list.component';
 import { ItemCreateComponent } from './components/item/item-create/item-create.component';
 import { ItemDetailComponent } from './components/item/item-detail/item-detail.component';
 import { ItemEditComponent } from './components/item/item-edit/item-edit.component';
@@ -18,25 +18,15 @@ import { VarientEditComponent } from './components/varient/varient-edit/varient-
 import { VarientComponent } from './components/varient/varient.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: CollectionComponent,
-    children: [
-      { path: 'create', component: CollectionCreateComponent },
-      { path: 'edit/:id', component: CollectionEditComponent },
-      { path: 'detail/:id', component: CollectionDetailsComponent },
-    ]
-  },
+  { path: 'list', component: CollectionListComponent },
+  { path: 'create', component: CollectionCreateComponent },
+  { path: 'edit/:id', component: CollectionEditComponent },
+  { path: 'detail/:id', component: CollectionDetailsComponent },
 
-  {
-    path: 'product',
-    component: ProductComponent,
-    children: [
-      { path: 'create', component: ProductCreateComponent },
-      { path: 'edit/:id', component: ProductEditComponent },
-      { path: 'detail/:id', component: ProductDetailComponent },
-    ]
-  },
+  { path: 'product', component: ProductComponent },
+  { path: 'product/create', component: ProductCreateComponent },
+  { path: 'product/edit/:id', component: ProductEditComponent },
+  { path: 'product/detail/:id', component: ProductDetailComponent },
 
   {
     path: 'varient',
@@ -56,6 +46,11 @@ const routes: Routes = [
       { path: 'detail/:id', component: ItemDetailComponent }
     ]
   },
+  {
+    path: '',
+    redirectTo: 'list',
+    component: CollectionListComponent
+  }
 
 ];
 

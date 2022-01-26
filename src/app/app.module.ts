@@ -310,7 +310,8 @@ FullCalendarModule.registerPlugins([
         },
         { provide: LocationStrategy, useClass: HashLocationStrategy },
         CountryService, CustomerService, EventService, IconService, NodeService,
-        PhotoService, ProductService, MenuService, AppBreadcrumbService
+        PhotoService, ProductService, MenuService, AppBreadcrumbService,
+
     ],
     bootstrap: [AppComponent]
 })

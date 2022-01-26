@@ -1,1 +1,27 @@
-<p>signup works!</p>
+<div class="form-container">
+    <span class="p-input-icon-left">
+        <i class="pi pi-user"></i>
+        <input type="text" [(ngModel)]="signUpData.username" autocomplete="off" pInputText placeholder="Username">
+    </span>
+    <span class="p-input-icon-left">
+        <i class="pi pi-envelope"></i>
+        <input type="text" [(ngModel)]="signUpData.email" autocomplete="off" pInputText placeholder="Email">
+    </span>
+    <span class="p-input-icon-left">
+        <i class="pi pi-key"></i>
+        <input type="password" [(ngModel)]="pass" autocomplete="off" pInputText placeholder="Password">
+    </span>
+    <span class="p-input-icon-left">
+        <i class="pi pi-key"></i>
+        <input type="password" [(ngModel)]="confirmPass" autocomplete="off" pInputText placeholder="Confirm Password">
+    </span>
+    <ng-container *ngIf="pass !== confirmPass">
+        <span class="p-error">Password mismatch</span>
+        <!-- <a href="#" class="flex">Forgot your password?</a> -->
+    </ng-container>
+    
+</div>
+<div class="button-container">
+    <button type="button" pButton label="Register" (click)="registerUser()" ></button>
+    <span [routerLink]="['/auth/login']" >Have an account?<a>Login here</a></span>
+</div>
