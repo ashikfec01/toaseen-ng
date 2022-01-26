@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
@@ -6,7 +6,7 @@ import { PrimeNGConfig } from 'primeng/api';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
 
     menuMode = 'sidebar';
 
@@ -16,7 +16,7 @@ export class AppComponent implements OnInit{
 
     ripple: boolean;
 
-    colorScheme = 'dark';
+    colorScheme = 'light';
 
     constructor(private primengConfig: PrimeNGConfig) {
     }

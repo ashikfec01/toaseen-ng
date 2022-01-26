@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppMainComponent } from './app.main.component';
 
@@ -72,29 +72,29 @@ export class AppConfigComponent implements OnInit {
 
     themeColors: any[];
 
-    constructor(public appMain: AppMainComponent, public app: AppComponent) {}
+    constructor(public appMain: AppMainComponent, public app: AppComponent) { }
 
     ngOnInit() {
         this.themeColors = [
-            {name: 'blue', color: '#0F8BFD'},
-            {name: 'green', color: '#0BD18A'},
-            {name: 'magenta', color: '#EC4DBC'},
-            {name: 'orange', color: '#FD9214'},
-            {name: 'purple', color: '#873EFE'},
-            {name: 'red', color: '#FC6161'},
-            {name: 'teal', color: '#00D0DE'},
-            {name: 'yellow', color: '#EEE500'}
+            { name: 'blue', color: '#0F8BFD' },
+            { name: 'green', color: '#0BD18A' },
+            { name: 'magenta', color: '#EC4DBC' },
+            { name: 'orange', color: '#FD9214' },
+            { name: 'purple', color: '#873EFE' },
+            { name: 'red', color: '#FC6161' },
+            { name: 'teal', color: '#00D0DE' },
+            { name: 'yellow', color: '#EEE500' }
         ];
 
         this.layoutColors = [
-            {name: 'blue', color: '#0F8BFD'},
-            {name: 'green', color: '#0BD18A'},
-            {name: 'magenta', color: '#EC4DBC'},
-            {name: 'orange', color: '#FD9214'},
-            {name: 'purple', color: '#873EFE'},
-            {name: 'red', color: '#FC6161'},
-            {name: 'teal', color: '#00D0DE'},
-            {name: 'yellow', color: '#EEE500'}
+            { name: 'blue', color: '#0F8BFD' },
+            { name: 'green', color: '#0BD18A' },
+            { name: 'magenta', color: '#EC4DBC' },
+            { name: 'orange', color: '#FD9214' },
+            { name: 'purple', color: '#873EFE' },
+            { name: 'red', color: '#FC6161' },
+            { name: 'teal', color: '#00D0DE' },
+            { name: 'yellow', color: '#EEE500' }
         ];
     }
 
@@ -160,6 +160,9 @@ export class AppConfigComponent implements OnInit {
     }
 
     onConfigButtonClick(event) {
+        console.log(this.appMain);
+        console.log("event", event);
+
         this.appMain.configActive = !this.appMain.configActive;
         this.appMain.configClick = true;
         event.preventDefault();

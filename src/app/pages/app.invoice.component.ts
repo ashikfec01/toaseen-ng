@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
-import {AppBreadcrumbService} from '../app.breadcrumb.service';
-import {AppComponent} from '../app.component';
+import { Component } from '@angular/core';
+import { AppBreadcrumbService } from '../app.breadcrumb.service';
+import { AppComponent } from '../app.component';
 
 @Component({
     templateUrl: './app.invoice.component.html'
@@ -15,6 +15,8 @@ export class AppInvoiceComponent {
     }
 
     print() {
+        console.log(window.document.querySelector("div>#invoice-content"));
+
         window.print();
     }
 }
